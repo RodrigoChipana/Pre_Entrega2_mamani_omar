@@ -32,8 +32,8 @@ const ItemListContainer = () => {
     
   return (
     <div>
-      <Center bg="#D6EAF8" h="100px" color="black">
-        <Heading as="h2" size="2xl">
+      <Center bg="#F6AD55" h="100px" color="black">
+        <Heading as="h2" size="2xl" fontFamily={"monospace"}>
             Productos
         </Heading>
       </Center>

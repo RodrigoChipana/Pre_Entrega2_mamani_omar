@@ -1,7 +1,7 @@
 [
     {
         "id":1
-        ,"img": "https://postimg.cc/gw1p6d5Z][img]https://i.postimg.cc/gw1p6d5Z/1.jpg"
+        ,"img": "https://i.postimg.cc/gw1p6d5Z/1.jpg"
         ,"name":"Zapatilla 1"
         ,"price": 200
         ,"color":"gris"
@@ -11,7 +11,7 @@
     },
     {
         "id":2
-        ,"img":"https://postimg.cc/vg9srkFS][img]https://i.postimg.cc/vg9srkFS/2.jpg"
+        ,"img":"https://i.postimg.cc/vg9srkFS/2.jpg"
         ,"name":"Zapatilla 2"
         ,"price": 400
         ,"color":"negro"
@@ -21,7 +21,7 @@
     },
     {
         "id":3
-        ,"img":"https://postimg.cc/WqvPX8sp][img]https://i.postimg.cc/WqvPX8sp/3.jpg"
+        ,"img":"https://i.postimg.cc/WqvPX8sp/3.jpg"
         ,"name":"Zapatilla 3"
         ,"price": 800
         ,"color":"blanca"
@@ -31,7 +31,7 @@
     },
     {
         "id":4
-        ,"img":"https://postimg.cc/1Vr1TFzG][img]https://i.postimg.cc/1Vr1TFzG/4.jpg"
+        ,"img":"https://i.postimg.cc/1Vr1TFzG/4.jpg"
         ,"name":"Remera 1"
         ,"price": 100
         ,"color":"negro"
@@ -41,7 +41,7 @@
     },
     {
         "id":5
-        ,"img":"https://postimg.cc/PPdjDS62][img]https://i.postimg.cc/PPdjDS62/5.jpg"
+        ,"img":"https://i.postimg.cc/PPdjDS62/5.jpg"
         ,"name":"Remera 2"
         ,"price": 200
         ,"color":"rosa"
@@ -51,7 +51,7 @@
     },
     {
         "id":6
-        ,"img":"https://postimg.cc/9zd2z6BD][img]https://i.postimg.cc/9zd2z6BD/6.jpg"
+        ,"img":"https://i.postimg.cc/9zd2z6BD/6.jpg"
         ,"name":"Remera 3"
         ,"price": 300
         ,"color":"azul"
@@ -61,7 +61,7 @@
     },
     {
         "id":7
-        ,"img":"https://postimg.cc/mtVGy7JR][img]https://i.postimg.cc/mtVGy7JR/7.jpg"
+        ,"img":"https://i.postimg.cc/mtVGy7JR/7.jpg"
         ,"name":"Campera 1"
         ,"price": 400
         ,"color":"amarillo"
@@ -71,7 +71,7 @@
     },
     {
         "id":8
-        ,"img":"https://postimg.cc/rDPXvMqP][img]https://i.postimg.cc/rDPXvMqP/8.jpg"
+        ,"img":"https://i.postimg.cc/rDPXvMqP/8.jpg"
         ,"name":"Campera 2"
         ,"price": 700
         ,"color":"gris"
@@ -81,7 +81,7 @@
     },
     {
         "id":9
-        ,"img":"https://postimg.cc/JsnC6GCX][img]https://i.postimg.cc/JsnC6GCX/9.jpg"
+        ,"img":"https://i.postimg.cc/JsnC6GCX/9.jpg"
         ,"name":"Campera 3"
         ,"price": 900
         ,"color":"rojo"

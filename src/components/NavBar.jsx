@@ -1,21 +1,21 @@
 import CartWidget from "./CartWidget";
-import { Heading, Box, Flex, Spacer,Container, Menu,MenuButton, MenuList,MenuItem,Button,Avatar} from '@chakra-ui/react';
+import { Heading, Box, Flex, Spacer,Container, Menu,MenuButton, MenuList,MenuItem,Button,Avatar,Center, Square, Circle} from '@chakra-ui/react';
 import React from "react";
 import{Link,NavLink} from 'react-router-dom';
-//falta importar icon chakra
 
 const NavBar = () => {
     return (
     <>
         <Container maxW="100%" bg='black' color='white'  h='85'>
             <Flex alignContent={"center"} gap="2" >
-                <Box p="3" h='50'bg='tomato'borderRadius='5%'>
-                    <CartWidget/>
-                </Box>
+                <Center w='60px' h='60px' bg='tomato' color='white'marginTop={"13px"}>
+                        < CartWidget/>
+                </Center>
+                
                 <Spacer/>
-                <Box p="4">
+                <Box p="4" marginLeft={"12%"}>
                      
-                     <Link to={"/"}><Heading size={"xl"}>UNIQUE </Heading></Link>
+                     <Link to={"/"}><Heading size={"2xl"}>UNIQUE </Heading></Link>
                 </Box>
                 <Spacer/>
                 <Box>
@@ -25,7 +25,7 @@ const NavBar = () => {
                                 as={Button}
                                 size="lg"
                                 variant="outline"
-                                colorScheme="pink"
+                                colorScheme="orange"
                                 m="5"
                             >
                             Catalogue  
@@ -37,7 +37,7 @@ const NavBar = () => {
                         as={Button}
                         size="lg"
                         variant="outline"
-                        colorScheme="pink"
+                        colorScheme="orange"
                         m="5"
                     >
                     Categories  
