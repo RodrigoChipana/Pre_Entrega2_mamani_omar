@@ -1,34 +1,21 @@
 import ItemDetail from "./ItemDetail";
-import { useState } from "react";
-import Products from "../products.json";
-import { useParams } from "react-router";
+import { useState, useEffect } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
 const ItemDetailContainer = () => {
-  const { id } = useParams();
-  const [products, setProducts] = useState([]);
-  const getDatos = () => {
-    return new Promise((resolve, reject) => {
-      if (Products.length === 0) {
-        reject(new Error("No hay datos"));
-      }
-      setTimeout(() => {
-        const productFilter = Products.filter((product) => product.id == id);
-        resolve(productFilter);
-      }, 2000);
-    });
-  };
-
-  async function fetchingData() {
-    try {
-      const datosFetched = await getDatos();
-      setBikes(datosFetched);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  fetchingData();
-
-  return <ItemDetail products={Products} />;
+  const [data, setData] = useState([]);
+      useEffect(() => {
+        const datos = getFirestore();
+        const productsCollection = collection(datos, "products");
+        getDocs(productsCollection).then((querySnapshot) => {
+          const products = querySnapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setData(products);
+        });
+      }, []);
+  return <ItemDetail products={data} />;
 };
 
 export default ItemDetailContainer;

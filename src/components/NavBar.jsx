@@ -8,13 +8,13 @@ const NavBar = () => {
     <>
         <Container maxW="100%" bg='black' color='white'  h='85'>
             <Flex alignContent={"center"} gap="2" >
-                <Center w='60px' h='60px' bg='tomato' color='white'marginTop={"13px"}>
-                        < CartWidget/>
+                <Center  w='60px' h='60px'  color='tomato' marginTop={"13px"}  >
+                <Link  to={"/cart"} >
+                    <CartWidget />
+                </Link>
                 </Center>
-                
                 <Spacer/>
                 <Box p="4" marginLeft={"12%"}>
-                     
                      <Link to={"/"}><Heading size={"2xl"}>UNIQUE </Heading></Link>
                 </Box>
                 <Spacer/>
@@ -28,7 +28,7 @@ const NavBar = () => {
                                 colorScheme="orange"
                                 m="5"
                             >
-                            Catalogue  
+                            Catalogo  
                             </MenuButton>   
                         </Link>
                     </Menu>
@@ -40,7 +40,7 @@ const NavBar = () => {
                         colorScheme="orange"
                         m="5"
                     >
-                    Categories  
+                    Categorias  
                     </MenuButton>
                     <MenuList className="menu-list" color={"black"}>
                         <Link to={`/category/${"Zapatilla"}`}>

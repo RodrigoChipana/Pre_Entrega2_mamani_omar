@@ -11,35 +11,63 @@ import {
     Divider,
   } from "@chakra-ui/react";
   import { useParams } from "react-router-dom";
+  import ItemCount from "./ItemCount";
+  import { useEffect, useState } from "react";
+  import { doc, getDoc, getFirestore } from "firebase/firestore";
   
   const ItemDetail = ({ products }) => {
     const { id } = useParams();
+    const [producto, setProducto] = useState([]);
+    useEffect(() => {
+      const datos = getFirestore();
+      const productRef = doc(datos, "products", `${id}`);
+      getDoc(productRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          setProducto(snapshot.data());
+        } else {
+        }
+      });
+    }, []);
   
     const productFilter = products.filter((product) => product.id == id);
-    
-    console.log(productFilter);
-
+  
     return (
       <>
-        <div className='container-items'>
-			{productFilter.map(product => (
-
-				<div className='item' key={product.id}>
-					<div className='info-product'>
-                    <figure>
-						<img src={product.img}/>
-					</figure>
-						<h2>{product.name}</h2>
-                        <h2>Color: {product.color}</h2>
-                        <p className='stock'>Stock: {product.stock}</p>
-						<p className='price'>${product.price}</p>
-                        
-					</div>
-				</div>
-			))}
-		    </div>
-
-       
+        {productFilter.map((product) => (
+          <div key={product.id}>
+            <Center p="1rem">
+              <Card className="card-main">
+                <CardBody>
+                  <Image borderRadius="lg" src={product.img} />
+                  <Stack mt="6" spacing="3">
+                    <Heading size="md">{product.name}</Heading>
+                    <Text color="blue.800" fontSize="l">
+                      Color: {product.color}
+                    </Text>
+                    <Text color="blue.800" fontSize="l">
+                      Categoria: {product.category}
+                    </Text>
+                    <Text color="red.600" fontSize="xl">
+                      Stock: {product.stock}
+                    </Text>
+                    <Text color="green.600" fontSize="xl">
+                      Precio: $ {product.price}
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter className="card-footer">
+                  <ItemCount
+                    stock={product.stock}
+                    id={product.id}
+                    price={product.price}
+                    name={product.name}
+                  />
+                </CardFooter>
+              </Card>
+            </Center>
+          </div>
+        ))}
       </>
     );
   };

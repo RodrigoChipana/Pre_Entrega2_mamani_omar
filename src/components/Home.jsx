@@ -9,7 +9,9 @@ const Home = () => {
                 <Image
                 src="https://i.postimg.cc/9FtqRntc/sitio-web-oficial-de-nike.jpg"
                 alt="grupo"
+                
                 />
+                p={"sadasd"}
             </Box>
         </Center>
     </div>
