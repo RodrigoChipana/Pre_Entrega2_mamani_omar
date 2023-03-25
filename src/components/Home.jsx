@@ -11,7 +11,7 @@ const Home = () => {
                 alt="grupo"
                 
                 />
-                p={"sadasd"}
+                
             </Box>
         </Center>
     </div>

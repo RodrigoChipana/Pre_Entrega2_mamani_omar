@@ -2,6 +2,7 @@ import CartWidget from "./CartWidget";
 import { Heading, Box, Flex, Spacer,Container, Menu,MenuButton, MenuList,MenuItem,Button,Avatar,Center, Square, Circle} from '@chakra-ui/react';
 import React from "react";
 import{Link,NavLink} from 'react-router-dom';
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
     return (
@@ -38,6 +39,7 @@ const NavBar = () => {
                         size="lg"
                         variant="outline"
                         colorScheme="orange"
+                        rightIcon={<ChevronDownIcon />}
                         m="5"
                     >
                     Categorias  

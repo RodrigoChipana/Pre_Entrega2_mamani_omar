@@ -7,7 +7,7 @@ import Cart from "./components/Cart";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
 
-const App = () =>{
+function App  () {
 
 
  return(

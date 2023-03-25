@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
-//import SendOrder from "./SendOrder";
+import SendOrder from "./SendOrder";
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
@@ -53,7 +53,7 @@ const Cart = () => {
             </Card>
           </Container>
         );
-      })}
+      })}<SendOrder />
     </>
   );
 };

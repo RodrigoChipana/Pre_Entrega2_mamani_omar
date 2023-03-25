@@ -28,7 +28,6 @@ const ItemListContainer = () => {
         </Heading>
       </Center>
       {category ? <ItemList products={catFilter} /> : <ItemList products={products} />}
-      
     </div>
   );
 };

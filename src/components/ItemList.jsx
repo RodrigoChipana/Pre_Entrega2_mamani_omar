@@ -1,3 +1,4 @@
+/* */
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -28,4 +29,30 @@ const ItemList=({products})=>{
 
 export default ItemList;
 
+/* 
+import Item from "./Item";
+import { Container } from "@chakra-ui/react";
 
+const ItemList = ({ products }) => {
+  return (
+    <>
+      <Container className="main-catalogue">
+        {products?.map((product) => (
+          <Item
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            color={product.color}
+            price={product.price}
+            stock={product.stock}
+            category={product.category}
+            img={product.img}
+          />
+        ))}
+      </Container>
+    </>
+  );
+};
+
+export default ItemList;
+*/

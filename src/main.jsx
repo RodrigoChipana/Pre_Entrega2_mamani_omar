@@ -15,11 +15,9 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig);
-const rootElement = document.getElementById('root')
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
-)
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <ChakraProvider>
+    <App />
+  </ChakraProvider>
+);
