@@ -24,6 +24,10 @@ const Cart = () => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
+  const deleteProduct = (index) => {
+    setCart(cart.filter((product, i) => i !== index));
+  };
+
   return (
     <>
       <Center bg="#D6EAF8" h="100px" color="black">
@@ -31,7 +35,7 @@ const Cart = () => {
           Carrito
         </Heading>
       </Center>
-      {cart.map((item) => {
+      {cart.map((item, index) => {
         return (
           <Container key={item.id} className="main-catalogue">
             <Card maxW="sm">
@@ -45,9 +49,9 @@ const Cart = () => {
               <CardFooter>
                 <Button
                   colorScheme="red"
-                  onClick={() => console.log("Eliminando")}
+                  onClick={() => deleteProduct(index)}
                 >
-                  Eliminando del carrito
+                  Eliminar del carrito
                 </Button>
               </CardFooter>
             </Card>

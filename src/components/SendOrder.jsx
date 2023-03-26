@@ -38,18 +38,18 @@ import {
     return (
       <div>
         <Center>
-          <Heading>Sending orders</Heading>
+          <Heading>Enviar orden</Heading>
         </Center>
   
         <Container>
           <FormControl>
             <form onSubmit={handleSubmit}>
-              <FormLabel>NAME</FormLabel>
+              <FormLabel>NOMBRE</FormLabel>
               <Input size="lg" onChange={(e) => setName(e.target.value)} />
               <FormLabel>EMAIL</FormLabel>
               <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
               <Button colorScheme="blue" type="submit" m={5}>
-                Send Infomation
+                Enviar pedido
               </Button>
             </form>
           </FormControl>
